@@ -5,6 +5,20 @@ go_testedbinary {
   // Go package to build.
   pkg: "github.com/inovarka/se-lab1/build/cmd/bood",
 
+  // Go package to test.
+  testPkg: "github.com/inovarka/se-lab1/build/gomodule",
+
+  // Build inputs.
+  srcs: ["**/*.go", "../go.mod"]
+}
+
+go_test_coverage {
+  // Module (and output) name.
+  name: "bood-coverage",
+
+  // Go package to build.
+  pkg: "./...",
+
   // Build inputs.
   srcs: ["**/*.go", "../go.mod"]
 }
