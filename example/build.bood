@@ -1,0 +1,13 @@
+go_testedbinary {
+  // Module (and output) name.
+  name: "example_bin",
+
+  // Go package to build.
+  pkg: "github.com/inovarka/se-lab1/example",
+
+  // Go package to test.
+  testPkg: "github.com/inovarka/se-lab1/example",
+
+  // Build inputs.
+  srcs: ["**/*.go", "../go.mod"]
+}

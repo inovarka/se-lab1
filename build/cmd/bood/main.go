@@ -31,7 +31,7 @@ func main() {
 	ninjaBuildPath := bood.GenerateBuildFile(config, ctx)
 
 	if !*dryRun {
-		config.Info.Println("Starting the build now")
+		config.Info.Println("Starting the build nows")
 
 		cmd := exec.Command("ninja", append([]string{"-f", ninjaBuildPath}, flag.Args()...)...)
 		cmd.Stdout = os.Stdout
