@@ -52,7 +52,7 @@ func (tb *testedBinaryModule) GenerateBuildActions(ctx blueprint.ModuleContext) 
 
 	outputPath := path.Join(config.BaseOutputDir, "bin", name)
 	// reportPath := path.Join(config.BaseOutputDir, fmt.Sprintf("%s-%v.txt", name, time.Now().UnixNano()))
-	reportPath := path.Join(config.BaseOutputDir, "report.log")
+	reportPath := path.Join(config.BaseOutputDir, fmt.Sprintf("%s.txt", name))
 
 	inputs, testInputs, withError := patternsToPaths(ctx, tb.properties.Srcs, tb.properties.SrcsExclude)
 	if withError {
